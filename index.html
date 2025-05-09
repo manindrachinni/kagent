@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nubys Tech - Cars & Bikes</title>
+    <title>Top Gear Automobiles</title>
     <style>
         * {
             margin: 0;
@@ -80,6 +80,64 @@
         
         .search-button:hover {
             background: #c0392b;
+        }
+        
+        /* Navigation Tabs Styles */
+        .nav-tabs-container {
+            background: #f8f9fa;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        
+        .nav-tabs {
+            display: flex;
+            max-width: 1100px;
+            margin: 0 auto;
+            list-style: none;
+            padding: 0 20px;
+        }
+        
+        .nav-tabs li {
+            position: relative;
+        }
+        
+        .nav-tabs li a {
+            display: block;
+            padding: 15px 25px;
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            border-radius: 4px 4px 0 0;
+        }
+        
+        .nav-tabs li a:hover {
+            color: white;
+            background-color: #1e3c72;
+        }
+        
+        .nav-tabs li.active a {
+            color: #1e3c72;
+        }
+        
+        .nav-tabs li.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+        }
+        
+        .tab-indicator {
+            height: 3px;
+            position: absolute;
+            bottom: 0;
+            transition: all 0.3s ease;
         }
         
         .container {
@@ -276,6 +334,16 @@
                 max-width: 100%;
             }
             
+            .nav-tabs {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .nav-tabs li a {
+                padding: 12px 15px;
+                font-size: 13px;
+            }
+            
             .sections {
                 flex-direction: column;
             }
@@ -292,14 +360,25 @@
         <div class="header-container">
             <div class="logo-container">
                 <img src="https://manindrachinni.github.io/knowledge_agent/Top%20Gear.jpg" alt="Top Gear Logo" class="logo">
-                <div class="company-name">Top Gear</div>
+                <div class="company-name">Top Gear Automobiles</div>
             </div>
             <div class="search-container">
-                <input type="text" class="search-bar" placeholder="Search cars,models, or parts...">
+                <input type="text" class="search-bar" placeholder="Search cars, models, or services...">
                 <button class="search-button">Search</button>
             </div>
         </div>
     </header>
+    
+    <!-- Navigation Tabs -->
+    <div class="nav-tabs-container">
+        <ul class="nav-tabs">
+            <li class="active"><a href="https://nubystech.com/">Home</a></li>
+            <li><a href="https://nubystech.com/">Services</a></li>
+            <li><a href="https://nubystech.com/">Bookings</a></li>
+            <li><a href="https://nubystech.com/">Parts Shop</a></li>
+            <li><a href="https://nubystech.com/">Contact Us</a></li>
+        </ul>
+    </div>
     
     <div class="container">
         <h2>Top Gear Car Services</h2>
@@ -417,7 +496,6 @@
 	};
 </script>
 <script type='text/javascript' src='https://nu1738425293563.my.site.com/ESWAutoMobileinGitHub1744797965689/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-
 
 </body>
 </html>
